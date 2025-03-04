@@ -1,0 +1,41 @@
+
+#initialization functions
+scoreboard players add timer sw_var 1
+execute as @a run function savage_weapons:divine-power/update-power
+
+
+#armor operations
+execute if score timer sw_var matches 10.. as @a run function savage_weapons:divine-power/effects
+
+execute as @a[scores={sw_DP=8..,sw_sneak=1..,sw_mana=12..},nbt={OnGround:0b}] at @s unless block ~ ~ ~ minecraft:water unless block ~ ~ ~ minecraft:lava run function savage_weapons:divine-power/abilities/floats/main
+execute as @a[scores={sw_DP=8..,sw_sneak=1..,sw_mana=12..},nbt={OnGround:0b}] at @s run function savage_weapons:divine-power/abilities/floats/void-save
+execute as @a[tag=sw_floating,scores={sw_sneak=0}] run effect clear @s levitation
+execute as @a[tag=sw_floating,scores={sw_sneak=0}] run effect clear @s slow_falling
+execute as @a[tag=sw_floating,scores={sw_sneak=0}] run tag @s remove sw_floating
+
+effect give @a[scores={sw_slowfall=2..}] levitation 1 255 true
+effect give @a[scores={sw_slowfall=2..}] slow_falling 1 255 true
+effect clear @a[scores={sw_slowfall=1}] levitation
+effect clear @a[scores={sw_slowfall=1}] slow_falling
+
+scoreboard players remove @a[scores={sw_slowfall=1..}] sw_slowfall 1
+execute as @a[scores={sw_DP=1..}] unless score @s sw_mana matches 5000.. run function savage_weapons:divine-power/mana/regen
+
+
+#wand stuff
+execute as @a[scores={sw_wand=1..,sw_DP=1..}] run function savage_weapons:divine-power/wand-init
+
+execute as @a[scores={sw_rampage_duration=1..}] at @s rotated as @s run function savage_weapons:divine-power/abilities/rampage-wand/loop
+scoreboard players remove @a[scores={sw_rampage_cd=1..}] sw_rampage_cd 1
+execute as @a[nbt=!{SelectedItem:{tag:{wand:"ray"}}}] run tag @s remove sw_deathray
+execute as @a[tag=sw_deathray] at @s run function savage_weapons:divine-power/abilities/death-ray/loop-start
+execute as @a[scores={sw_meteor=1..}] at @s rotated as @s anchored feet run function savage_weapons:divine-power/abilities/meteor-wand/fire
+
+
+#mobs
+execute if score timer sw_var matches 10.. as @e[tag=sw_hyperwither] run function savage_weapons:mobs/hyper-wither/hyperwither-behavior
+
+#cleanup
+execute as @e[tag=sw_temporary] run function savage_weapons:entity-lifespan
+scoreboard players set @a sw_sneak 0
+execute if score timer sw_var matches 10.. run scoreboard players set timer sw_var 0
