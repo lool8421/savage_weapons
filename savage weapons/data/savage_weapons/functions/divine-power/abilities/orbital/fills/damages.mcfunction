@@ -1,0 +1,13 @@
+execute if score @s sw_orbital_time matches 4 run execute as @e[distance=..4] run damage @s 10 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 8 run execute as @e[distance=..8] run damage @s 20 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 12 run execute as @e[distance=..12] run damage @s 40 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 16 run execute as @e[distance=..16] run damage @s 60 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 20 run execute as @e[distance=..20] run damage @s 80 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 30 run execute as @e[distance=..30] run damage @s 120 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 40 run execute as @e[distance=..40] run damage @s 150 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 50 run execute as @e[distance=..50] run damage @s 200 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 60 run execute as @e[distance=..60] run damage @s 300 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 70 run execute as @e[distance=..70] run damage @s 400 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 80 run execute as @e[distance=..80] run damage @s 500 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 90 run execute as @e[distance=..90] run damage @s 750 minecraft:generic_kill
+execute if score @s sw_orbital_time matches 100 run execute as @e[distance=..100] run damage @s 1000 minecraft:generic_kill

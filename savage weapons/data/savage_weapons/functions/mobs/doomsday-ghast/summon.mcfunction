@@ -1,0 +1,2 @@
+summon minecraft:ghast ~ ~ ~ {Tags:['sw_doomghast'],CustomName:'{"text":"Doomsday Ghast","bold":true,"color":"red"}',CustomNameVisible:true,ActiveEffects:[{Id:11,Amplifier:3b,Duration:200000000},{Id:24,Duration:200000000},{Id:10,Amplifier:10b,Duration:200000000}],Attributes:[{Base:1000f,Name:"minecraft:generic.max_health"},{Base:60.0d,Name:"minecraft:generic.follow_range"}],Health:1000f,ExplosionPower:50}
+team join sw_hyperwither @e[tag=sw_doomghast]

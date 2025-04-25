@@ -5,7 +5,7 @@ execute as @a run function savage_weapons:divine-power/update-power
 
 
 #armor operations
-execute if score timer sw_var matches 10.. as @a run function savage_weapons:divine-power/effects
+execute if score timer sw_var matches 10 as @a run function savage_weapons:divine-power/effects
 
 execute as @a[scores={sw_DP=8..,sw_sneak=1..,sw_mana=12..},nbt={OnGround:0b}] at @s unless block ~ ~ ~ minecraft:water unless block ~ ~ ~ minecraft:lava run function savage_weapons:divine-power/abilities/floats/main
 execute as @a[scores={sw_DP=8..,sw_sneak=1..,sw_mana=12..},nbt={OnGround:0b}] at @s run function savage_weapons:divine-power/abilities/floats/void-save
@@ -31,9 +31,16 @@ execute as @a[nbt=!{SelectedItem:{tag:{wand:"ray"}}}] run tag @s remove sw_death
 execute as @a[tag=sw_deathray] at @s run function savage_weapons:divine-power/abilities/death-ray/loop-start
 execute as @a[scores={sw_meteor=1..}] at @s rotated as @s anchored feet run function savage_weapons:divine-power/abilities/meteor-wand/fire
 
+scoreboard players remove @a[scores={sw_orbital_cd=1..}] sw_orbital_cd 1
+
+#orbital
+execute as @e[type=marker,tag=sw_orbitalpoint] at @s run function savage_weapons:divine-power/abilities/orbital/beam
 
 #mobs
-execute if score timer sw_var matches 10.. as @e[tag=sw_hyperwither] run function savage_weapons:mobs/hyper-wither/hyperwither-behavior
+execute if score timer sw_var matches 10 as @e[tag=sw_hyperwither] run function savage_weapons:mobs/hyper-wither/hyperwither-behavior
+execute if score timer sw_var matches 9 as @e[type=ender_dragon,tag=sw_omegadragon] at @s run function savage_weapons:mobs/omegadragon/behavior
+function savage_weapons:mobs/omegadragon/revive
+execute as @e[tag=sw_dragon_damage] at @s unless entity @e[distance=..2,tag=sw_omega_fireball] run function savage_weapons:mobs/omegadragon/fireballs/damage
 
 #cleanup
 execute as @e[tag=sw_temporary] run function savage_weapons:entity-lifespan

@@ -1,0 +1,2 @@
+data merge entity @s {Tags:['sw_thanos','sw_hyperwither'],CustomName:'{"text":"Hyper Wither","bold":true,"color":"red"}',CustomNameVisible:true,ActiveEffects:[{Id:11,Amplifier:4b,Duration:200000000},{Id:24,Duration:200000000},{Id:10,Amplifier:100b,Duration:200000000}],Attributes:[{Base:1000f,Name:"minecraft:generic.max_health"},{Base:60.0d,Name:"minecraft:generic.follow_range"}],Health:1000f,ArmorItems:[{id:"minecraft:beacon",Count:1b,tag:{Enchantments:[{id:"minecraft:blast_protection",lvl:10s}]}},{},{},{}]}
+team join sw_hyperwither @s

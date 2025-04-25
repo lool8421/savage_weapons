@@ -2,8 +2,8 @@ team join sw_fireballs
 tp @s ~ ~1 ~
 
 scoreboard players set min rng 0
-scoreboard players set max rng 250
-scoreboard players set subtract sw_var 125
+scoreboard players set max rng 200
+scoreboard players set subtract sw_var 100
 
 
 execute store result score fireballX sw_var run data get entity @s Pos[0] 100
@@ -22,9 +22,9 @@ function rng:rng
 scoreboard players operation out rng -= subtract sw_var
 scoreboard players operation fireballZ sw_var += out rng
 
-execute store result entity @s Motion[0] double 0.02 run scoreboard players get fireballX sw_var
-execute store result entity @s Motion[1] double 0.02 run scoreboard players get fireballY sw_var
-execute store result entity @s Motion[2] double 0.02 run scoreboard players get fireballZ sw_var
+execute store result entity @s Motion[0] double 0.025 run scoreboard players get fireballX sw_var
+execute store result entity @s Motion[1] double 0.025 run scoreboard players get fireballY sw_var
+execute store result entity @s Motion[2] double 0.025 run scoreboard players get fireballZ sw_var
 
 
 
