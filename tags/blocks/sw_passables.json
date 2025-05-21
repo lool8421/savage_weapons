@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:water",
+    "minecraft:lava",
+    "minecraft:air",
+    "minecraft:grass",
+    "minecraft:tall_grass",
+    "minecraft:fern",
+  	"minecraft:large_fern",
+  	"minecraft:snow",
+  	"#minecraft:wool_carpets",
+  	"minecraft:moss_carpet",
+  	"minecraft:fire"
+  
+  ]
+}
