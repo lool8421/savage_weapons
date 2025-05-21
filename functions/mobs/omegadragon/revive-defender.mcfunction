@@ -1,0 +1,2 @@
+data merge entity @s {ActiveEffects:[{Id:11,Amplifier:4b,Duration:200000000},{Id:24,Duration:200000000},{Id:6,Amplifier:28b,Duration:200000000}],Attributes:[{Base:1023f,Name:"minecraft:generic.max_health"}],Invulnerable:1b,Health:1023f,Tags:['sw_omegadragon','sw_omegadragon_defender'],ArmorItems:[{id:"minecraft:nether_star",Count:1b,tag:{sw_special:"omegadragon_revive",Enchantments:[{id:"minecraft:blast_protection",lvl:10s}]}},{},{},{}],ArmorDropChances:[2.0f,0.0f,0.0f,0.0f]}
+ride @s mount @e[type=ender_dragon,tag=sw_omegadragon,limit=1,sort=nearest]

@@ -1,0 +1,1 @@
+summon fireball ~ ~ ~ {Tags:['sw_dragon_fireball_1'],Passengers:[{id:"minecraft:zombie"}]}

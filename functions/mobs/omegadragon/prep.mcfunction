@@ -1,0 +1,4 @@
+team join sw_omegadragon
+tag @s remove sw_dragon_prep
+tp @s ~ ~30 ~
+data merge entity @s {Tags:['sw_thanos','sw_omegadragon'],CustomName:'{"text":"OmegaDragon","bold":true,"color":"purple"}',CustomNameVisible:true,ActiveEffects:[{Id:11,Amplifier:4b,Duration:200000000},{Id:24,Duration:200000000},{Id:6,Amplifier:28b,Duration:200000000}],Attributes:[{Base:1023f,Name:"minecraft:generic.max_health"}],Invulnerable:1b,Health:1023f,ArmorItems:[{id:"minecraft:nether_star",Count:1b,tag:{sw_special:"omegadragon_revive",Enchantments:[{id:"minecraft:blast_protection",lvl:10s}]}},{},{},{}],ArmorDropChances:[2.0f,0.0f,0.0f,0.0f]}

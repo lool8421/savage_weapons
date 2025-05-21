@@ -1,0 +1,3 @@
+data merge entity @s {Tags:['sw_doomghast'],CustomName:'{"text":"Doomsday Ghast","bold":true,"color":"red"}',CustomNameVisible:true,ActiveEffects:[{Id:11,Amplifier:3b,Duration:200000000},{Id:24,Duration:200000000},{Id:10,Amplifier:2b,Duration:200000000}],Attributes:[{Base:750f,Name:"minecraft:generic.max_health"},{Base:60.0d,Name:"minecraft:generic.follow_range"}],Health:1000f,ExplosionPower:60}
+team join sw_hyperwither
+function savage_weapons:divine-power/abilities/fish-cannon/fish-properties

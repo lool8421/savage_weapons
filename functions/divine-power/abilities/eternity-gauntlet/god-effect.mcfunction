@@ -1,0 +1,1 @@
+summon minecraft:wither ~ ~ ~ {CustomName:'{"text":"Reinforced Wither","color":"aqua"}',Tags:['sw_thanos'],ActiveEffects:[{Id:11,Amplifier:4b,Duration:20}],Attributes:[{Base:500f,Name:"minecraft:generic.max_health"}],Health:500f}
