@@ -10,6 +10,7 @@ execute if score @s sw_DP matches 9..12 run execute as @e[tag=!sw_rampage_caster
 execute if score @s sw_DP matches 13..16 run execute as @e[tag=!sw_rampage_caster,distance=..6] run damage @s 200 minecraft:explosion
 execute if score @s sw_DP matches 17..99 run execute as @e[tag=!sw_rampage_caster,distance=..8] run damage @s 50 minecraft:generic_kill
 execute if score @s sw_DP matches 17..99 run execute as @e[tag=!sw_rampage_caster,distance=..8] run damage @s 400 minecraft:explosion
+execute if score @s sw_DP matches 100.. run execute as @e[tag=!sw_rampage_caster,distance=..10] as @a[distance=..10] unless score @s sw_DP matches 100.. run clear @s
 execute if score @s sw_DP matches 100.. run execute as @e[tag=!sw_rampage_caster,distance=..10] run damage @s 250 minecraft:generic_kill
 execute if score @s sw_DP matches 100.. run execute as @e[tag=!sw_rampage_caster,distance=..10] run damage @s 1000 minecraft:explosion
 

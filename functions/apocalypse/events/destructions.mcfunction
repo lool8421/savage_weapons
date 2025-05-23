@@ -1,4 +1,4 @@
-spreadplayers ~ ~ 1 100 false @s
+spreadplayers ~ ~ 1 150 false @s
 
 execute if score apoc_time sw_var matches 0..800 at @s run summon lightning_bolt
 execute if score apoc_time sw_var matches 0..600 at @s run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 air 

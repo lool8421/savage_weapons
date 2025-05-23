@@ -1,4 +1,4 @@
-spreadplayers ~ ~ 1 100 false @s
+spreadplayers ~ ~ 1 150 false @s
 
 execute if score apoc_time sw_var matches 0..600 if predicate savage_weapons:3percent at @s run summon wither
 execute if score apoc_time sw_var matches 0..500 if predicate savage_weapons:3percent at @s run summon ender_dragon

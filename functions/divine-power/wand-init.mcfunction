@@ -6,6 +6,6 @@ execute if entity @s[nbt={SelectedItem:{tag:{wand:"meteor"}}}] if score @s sw_ma
 execute if entity @s[nbt={SelectedItem:{tag:{wand:"eternityGauntlet"}}}] if score @s sw_mana matches 5000.. run function savage_weapons:divine-power/abilities/eternity-gauntlet/init
 execute if entity @s[nbt={SelectedItem:{tag:{wand:"orbital"}}}] unless score @s sw_orbital_cd matches 1.. at @s rotated as @s anchored eyes run function savage_weapons:divine-power/abilities/orbital/init-projectile
 execute if entity @s[nbt={SelectedItem:{tag:{wand:"fishcannon"}}}] if score @s sw_mana matches 250.. at @s rotated as @s anchored eyes run function savage_weapons:divine-power/abilities/fish-cannon/init
-execute if entity @s[nbt={SelectedItem:{tag:{wand:"big_red_button"}}}] run function savage_weapons:divine-power/abilities/button/activate
+execute if entity @s[nbt={SelectedItem:{tag:{wand:"big_red_button"}}}] at @s run function savage_weapons:divine-power/abilities/button/activate
 
 scoreboard players set @s sw_wand 0

@@ -6,11 +6,11 @@ execute if score power sw_var matches 9..12 as @e[distance=..5,tag=!sw_caster] r
 execute if score power sw_var matches 13..16 as @e[distance=..6,tag=!sw_caster] run damage @s 75 minecraft:lightning_bolt 
 execute if score power sw_var matches 13..16 run function savage_weapons:explosions/mini
 
-execute if score power sw_var matches 17..99 as @e[distance=..20,tag=!sw_caster] run damage @s 30 minecraft:generic_kill  
+execute if score power sw_var matches 17..99 as @e[distance=..8,tag=!sw_caster] run damage @s 30 minecraft:generic_kill  
 execute if score power sw_var matches 17..99 as @e[distance=..8,tag=!sw_caster] run damage @s 150 minecraft:lightning_bolt
 execute if score power sw_var matches 17..99 run function savage_weapons:explosions/medium
 
-
+execute if score power sw_var matches 100.. as @a[distance=..20,tag=!sw_caster] unless score @s sw_DP matches 100.. run clear @s  
 execute if score power sw_var matches 100.. as @e[distance=..20,tag=!sw_caster] run damage @s 200 minecraft:generic_kill  
 execute if score power sw_var matches 100.. as @e[distance=..20,tag=!sw_caster] run damage @s 1000 minecraft:lightning_bolt  
 execute if score power sw_var matches 100.. run function savage_weapons:explosions/xxl
